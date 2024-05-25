@@ -6,6 +6,10 @@ extern "C"{
 
 }
 
+/*
+ * TODO: Timer für controller
+ * */
+
 int main(void)
 {
   DAVE_STATUS_t status;
@@ -30,8 +34,8 @@ int main(void)
   /* Start PWM */
   PWM_CCU8_Start(&PWM_Buck);
   PWM_CCU8_Start(&PWM_Boost);
-  PWM_CCU8_SetDutyCycleSymmetric  (&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  30*100);
-  PWM_CCU8_SetDutyCycleSymmetric  (&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  60*100);
+  PWM_CCU8_SetDutyCycleSymmetric  (&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  100*100);
+  PWM_CCU8_SetDutyCycleSymmetric  (&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0*100);
 
   while(1U)
   {
