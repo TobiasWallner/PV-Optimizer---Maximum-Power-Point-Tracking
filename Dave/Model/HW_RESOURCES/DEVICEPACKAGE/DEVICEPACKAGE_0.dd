@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ResourceModel:DevicePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/VQFN40.0.0/devicepackage/0">
+  <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/vqfn40.0.0/devicepackage/0/3">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin3"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="4" URI="http://resources/vqfn40.0.0/devicepackage/0/4">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@hwResources.20"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin4"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="20" URI="http://resources/vqfn40.0.0/devicepackage/0/20">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin20"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="19" URI="http://resources/vqfn40.0.0/devicepackage/0/19">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin19"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="28" URI="http://resources/vqfn40.0.0/devicepackage/0/28">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@hwResources.6"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin28"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="27" URI="http://resources/vqfn40.0.0/devicepackage/0/27">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin27"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="26" URI="http://resources/vqfn40.0.0/devicepackage/0/26">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin26"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="25" URI="http://resources/vqfn40.0.0/devicepackage/0/25">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin25"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="23" URI="http://resources/vqfn40.0.0/devicepackage/0/23">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@hwResources.5"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin23"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="30" URI="http://resources/vqfn40.0.0/devicepackage/0/30">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@hwResources.5"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin30"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="29" URI="http://resources/vqfn40.0.0/devicepackage/0/29">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM_CCU8/v4_1_32/PWM_CCU8_1.app#//@hwResources.6"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin29"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="7" URI="http://resources/vqfn40.0.0/devicepackage/0/7">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin7"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="10" URI="http://resources/vqfn40.0.0/devicepackage/0/10">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.20"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin10"/>
+  </provided>
+</ResourceModel:DevicePackage>
