@@ -93,7 +93,7 @@ UART_STATUS_t UART_0_init(void);
 /*USIC channel configuration*/
 const XMC_UART_CH_CONFIG_t UART_0_channel_config =
 {
-  .baudrate      = 115200U,
+  .baudrate      = 256000U,
   .data_bits     = 8U,
   .frame_length  = 8U,
   .stop_bits     = 1U,
@@ -133,7 +133,7 @@ const UART_CONFIG_t UART_0_config =
   .mode             = UART_MODE_FULLDUPLEX,
   .transmit_mode = UART_TRANSFER_MODE_INTERRUPT,
   .receive_mode = UART_TRANSFER_MODE_INTERRUPT,
-  .tx_fifo_size     = XMC_USIC_CH_FIFO_SIZE_16WORDS,
+  .tx_fifo_size     = XMC_USIC_CH_FIFO_SIZE_32WORDS,
   .rx_fifo_size     = XMC_USIC_CH_FIFO_SIZE_16WORDS,
   .tx_sr   = 0x2U,
 };
@@ -177,7 +177,7 @@ UART_STATUS_t UART_0_init()
   /*Configure transmit FIFO*/
   XMC_USIC_CH_TXFIFO_Configure(XMC_UART0_CH1,
         16U,
-        XMC_USIC_CH_FIFO_SIZE_16WORDS,
+        XMC_USIC_CH_FIFO_SIZE_32WORDS,
         1U);
   /*Configure receive FIFO*/
   XMC_USIC_CH_RXFIFO_Configure(XMC_UART0_CH1,
