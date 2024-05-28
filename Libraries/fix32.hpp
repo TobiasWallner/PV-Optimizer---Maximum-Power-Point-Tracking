@@ -7,8 +7,7 @@
 #pragma once
 
 #include <cinttypes>
-
-#include <bitset>
+#include <type_traits>
 
 template<size_t fractional_bits>
 class fix32{
