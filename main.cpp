@@ -22,10 +22,10 @@ static inline fix32<16> output_voltage(){
 static inline fix32<16> coil_current(){
 	static const fix32<16> factor(0.00322265625f);
 	static const fix32<16> offset(6.6f);
-	return fix32<16>(adc_il_raw_filtered) * factor + offset;
+	return fix32<16>(adc_il_raw_filtered) * factor - offset;
 }
 
-static fix32<16> boost_loss(0L);
+static fix32<16> boost_loss(1L);
 
 static inline fix32<16> output_current(){
 	return coil_current() * boost_loss;
@@ -38,10 +38,12 @@ static inline fix32<16> output_power(){
 // gain between 0 and 1 for boost and greater 1 for buck.
 static inline void set_duty_cycles(fix32<16> gain){
 	if(gain <= 0L){
+		boost_loss = 1;
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0L);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0L);
 	}else if(gain <= 1L){
 		// buck mode
+		boost_loss = 1;
 		const uint32_t buck_pwm = static_cast<uint32_t>(gain * 10000L);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  buck_pwm);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0L);
@@ -83,20 +85,28 @@ int main(void){
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
-	cout << "U, I, P, gain" << endl;
 	uint16_t update_counter = 0;
+	uint16_t output_state = 0;
 	while(1){
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
 			const auto U = output_voltage();
 			const auto I = output_current();
 			const auto P = U * I;
-			fix32<16> gain = fix32<16>(1); //esc.input(P);
+			fix32<16> gain = esc.input(P);
 			set_duty_cycles(gain);
+
 			++update_counter;
-			if(update_counter>250){
-				cout << U << ", " << I << ", " << P << ", " << gain << endl;
+			if(update_counter>100){
 				update_counter = 0;
+				// output strip-mining to mitigate busy waiting
+				switch(output_state){
+					break; case 0: {cout << U << "V, "; ++output_state;}
+					break; case 1: {cout << I << "A, "; ++output_state;}
+					break; case 2: {cout << P << "W, "; ++output_state;}
+					break; case 3: {cout << gain << endl; output_state = 0;}
+
+				};
 			}
 		}
 
