@@ -188,9 +188,9 @@
         const PWM_CCU8_CONFIG_t  PWM_Buck_config_handle =
             {
                 .start_control                       = false,      
-                .period_value                        = 319U,
-                .compare1_value                      = 220U,
-                .compare2_value                      = 159U,
+                .period_value                        = 1279U,
+                .compare1_value                      = 1280U,
+                .compare2_value                      = 1280U,
 
                 .int_per_match                       = false,
                 .int_cmp1_match_up                   = false,
@@ -295,8 +295,8 @@
                 .prescaler_shadow_txfr_msk           = (uint32_t)XMC_CCU8_SHADOW_TRANSFER_PRESCALER_SLICE_0,
 
                 .state                               = PWM_CCU8_STATE_UNINITIALIZED,
-                .sym_duty1                           = 3125U,
-                .sym_duty2                           = 5031U,
+                .sym_duty1                           = 0U,
+                .sym_duty2                           = 0U,
                 .asym_duty                           = 0U,
                 .asym_shift                          = 0U,
             };
@@ -428,9 +428,9 @@
         const PWM_CCU8_CONFIG_t  PWM_Boost_config_handle =
             {
                 .start_control                       = false,      
-                .period_value                        = 319U,
-                .compare1_value                      = 220U,
-                .compare2_value                      = 159U,
+                .period_value                        = 1279U,
+                .compare1_value                      = 1280U,
+                .compare2_value                      = 1280U,
 
                 .int_per_match                       = false,
                 .int_cmp1_match_up                   = false,
@@ -535,8 +535,8 @@
                 .prescaler_shadow_txfr_msk           = (uint32_t)XMC_CCU8_SHADOW_TRANSFER_PRESCALER_SLICE_1,
 
                 .state                               = PWM_CCU8_STATE_UNINITIALIZED,
-                .sym_duty1                           = 3125U,
-                .sym_duty2                           = 5031U,
+                .sym_duty1                           = 0U,
+                .sym_duty2                           = 0U,
                 .asym_duty                           = 0U,
                 .asym_shift                          = 0U,
             };
