@@ -91,7 +91,7 @@ int main(void){
 			const auto U = output_voltage();
 			const auto I = output_current();
 			const auto P = U * I;
-			fix32<16> gain = esc.input(P);
+			fix32<16> gain = fix32<16>(1); //esc.input(P);
 			set_duty_cycles(gain);
 			++update_counter;
 			if(update_counter>250){
