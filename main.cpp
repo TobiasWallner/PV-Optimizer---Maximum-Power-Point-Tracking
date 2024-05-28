@@ -2,6 +2,8 @@
  * Author: Tobias Wallner
  * tobias.wallner1@gmx.net
  * */
+
+// UART: 256000 Baud
 extern "C"{
 
 #include <DAVE.h>
@@ -24,8 +26,13 @@ static inline fix32<16> coil_current(){
 }
 
 static fix32<16> boost_loss(0L);
+
+static inline fix32<16> output_current(){
+	return coil_current() * boost_loss;
+}
+
 static inline fix32<16> output_power(){
-	return output_voltage() * coil_current() * boost_loss; // boost_loss ... because parts of the current used for boost is put into ground instead of the output
+	return output_voltage() * output_current(); // boost_loss ... because parts of the current used for boost is put into ground instead of the output
 }
 
 // gain between 0 and 1 for boost and greater 1 for buck.
@@ -76,16 +83,23 @@ int main(void){
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
-	cout << "int: " << -42 << endl;
-	cout << "fix32<16>: " << fix32<16>(42.42f) << endl;
-
+	cout << "U, I, P, gain" << endl;
+	uint16_t update_counter = 0;
 	while(1){
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
-			fix32<16> power = output_power();
-			fix32<16> controller_gain = esc.input(power);
-			set_duty_cycles(controller_gain);
+			const auto U = output_voltage();
+			const auto I = output_current();
+			const auto P = U * I;
+			fix32<16> gain = esc.input(P);
+			set_duty_cycles(gain);
+			++update_counter;
+			if(update_counter>250){
+				cout << U << ", " << I << ", " << P << ", " << gain << endl;
+				update_counter = 0;
+			}
 		}
+
 	}
 }
 
