@@ -142,7 +142,7 @@ public:
 		stream << digits << '.';
 
 		// print fractionals
-		while(fractionals != 0 && significant_places < 4){
+		while(fractionals != 0 && significant_places < 3){
 			significant_places += count_significant_enable;
 			fractionals = fractionals * 10;
 			uint32_t n = fractionals >> fractional_bits;
