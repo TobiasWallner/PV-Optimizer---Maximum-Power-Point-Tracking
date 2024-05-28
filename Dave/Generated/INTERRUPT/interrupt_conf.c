@@ -70,7 +70,7 @@ const INTERRUPT_t INTERRUPT_ADC_Voltage =
  .irqctrl = (XMC_SCU_IRQCTRL_t)0U,
 #endif
   .node = (IRQn_Type)16,
-  .priority = 3,  
+  .priority = 0,  
 #if(UC_FAMILY == XMC4)  
   .subpriority = 0,
 #endif  
@@ -84,7 +84,7 @@ const INTERRUPT_t INTERRUPT_ADC_Current =
  .irqctrl = (XMC_SCU_IRQCTRL_t)0U,
 #endif
   .node = (IRQn_Type)15,
-  .priority = 3,  
+  .priority = 0,  
 #if(UC_FAMILY == XMC4)  
   .subpriority = 0,
 #endif  

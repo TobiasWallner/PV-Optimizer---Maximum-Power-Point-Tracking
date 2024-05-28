@@ -3,8 +3,8 @@
   <properties provideInit="true"/>
   <virtualSignals name="ccu8_global_signal" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_config_global" hwSignal="global_signal" hwResource="//@hwResources.0"/>
   <virtualSignals name="event_period_match" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_period_match_interrupt" hwSignal="pmus_omds" hwResource="//@hwResources.0" required="false"/>
-  <virtualSignals name="event_ch1_cmp_match" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch1_compare_match_interrupt" hwSignal="cmd1s_cmu1s" hwResource="//@hwResources.0" required="false"/>
-  <virtualSignals name="event_ch2_cmp_match" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch2_compare_match_interrupt" hwSignal="cmd2s_cmu2s" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="event_ch1_cmp_match" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch1_compare_match_interrupt" hwSignal="cmd1s_cmu1s" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="event_ch2_cmp_match" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch2_compare_match_interrupt" hwSignal="cmd2s_cmu2s" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="event_0" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_event0_interrupt" hwSignal="e0as" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="event_1" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_event1_interrupt" hwSignal="e1as" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="event_2" URI="http://resources/4.1.32/app/PWM_CCU8/0/vs_event2_interrupt" hwSignal="e2as" hwResource="//@hwResources.0" required="false"/>
@@ -82,11 +82,11 @@
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/__pin_vs_port_ch2_out2/http://resources/4.1.32/app/PWM_CCU8/0/vs_port_ch2_out2" systemDefined="true" sourceSignal="PWM_CCU8 CH2 Direct Out_signal" targetSignal="Out - CCU8 CH2 Direct PAD" srcVirtualSignal="//@virtualSignals.32" targetVirtualSignal="//@virtualSignals.28"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/vs_port_ch2_out3/http://resources/4.1.32/app/PWM_CCU8/0/__pin_vs_port_ch2_out3" systemDefined="true" sourceSignal="Out - CCU8 CH2 Invert PAD" targetSignal="PWM_CCU8 CH2 Invert Out_signal" srcVirtualSignal="//@virtualSignals.29" targetVirtualSignal="//@virtualSignals.33"/>
   <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/__pin_vs_port_ch2_out3/http://resources/4.1.32/app/PWM_CCU8/0/vs_port_ch2_out3" systemDefined="true" sourceSignal="PWM_CCU8 CH2 Invert Out_signal" targetSignal="Out - CCU8 CH2 Invert PAD" srcVirtualSignal="//@virtualSignals.33" targetVirtualSignal="//@virtualSignals.29"/>
-  <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch2_compare_match_interrupt/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_queue_greqtr0sel" sourceSignal="event_ch2_cmp_match" targetSignal="trigger_input" srcVirtualSignal="//@virtualSignals.3">
+  <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch1_compare_match_interrupt/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_measurement_adv_queue_greqtr0sel" sourceSignal="event_ch1_cmp_match" targetSignal="trigger_input" srcVirtualSignal="//@virtualSignals.2">
     <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@virtualSignals.7"/>
     <targetVirtualSignal href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@virtualSignals.7"/>
   </connections>
-  <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch2_compare_match_interrupt/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_greqtr0sel" sourceSignal="event_ch2_cmp_match" targetSignal="trigger_input" srcVirtualSignal="//@virtualSignals.3">
+  <connections URI="http://resources/4.1.32/app/PWM_CCU8/0/http://resources/4.1.32/app/PWM_CCU8/0/vs_ccu8_cc8_ch1_compare_match_interrupt/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_greqtr0sel" sourceSignal="event_ch1_cmp_match" targetSignal="trigger_input" srcVirtualSignal="//@virtualSignals.2">
     <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@virtualSignals.7"/>
     <targetVirtualSignal href="../../ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@virtualSignals.7"/>
   </connections>

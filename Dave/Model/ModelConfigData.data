@@ -338,8 +338,6 @@
   <hwConnections href="APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.109"/>
   <hwConnections href="APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@connections.170"/>
   <hwConnections href="APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.170"/>
-  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.16"/>
-  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.17"/>
   <hwConnections href="APPS/TIMER/v4_1_12/TIMER_0.app#//@connections.0"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.0"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.1"/>
@@ -350,4 +348,6 @@
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.12"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.13"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.14"/>
+  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.16"/>
+  <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.17"/>
 </ApplicationModel:ApplicationData>
