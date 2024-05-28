@@ -188,9 +188,9 @@
         const PWM_CCU8_CONFIG_t  PWM_Buck_config_handle =
             {
                 .start_control                       = false,      
-                .period_value                        = 1279U,
-                .compare1_value                      = 1280U,
-                .compare2_value                      = 1280U,
+                .period_value                        = 319U,
+                .compare1_value                      = 320U,
+                .compare2_value                      = 320U,
 
                 .int_per_match                       = false,
                 .int_cmp1_match_up                   = true,
@@ -428,9 +428,9 @@
         const PWM_CCU8_CONFIG_t  PWM_Boost_config_handle =
             {
                 .start_control                       = false,      
-                .period_value                        = 1279U,
-                .compare1_value                      = 1280U,
-                .compare2_value                      = 1280U,
+                .period_value                        = 319U,
+                .compare1_value                      = 320U,
+                .compare2_value                      = 320U,
 
                 .int_per_match                       = false,
                 .int_cmp1_match_up                   = false,

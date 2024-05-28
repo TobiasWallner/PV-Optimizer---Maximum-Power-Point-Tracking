@@ -74,8 +74,8 @@ int main(void){
 
 	// initialize the ESC
 	const fix32<16> sample_time(0.001f); // 1ms or 1kHz
-	const fix32<16> driving_frequ(10.0f * 2.f * 3.1415f); // 10 Hz driving frequency
-	const fix32<16> driving_amplitude(0.01f); // 1%
+	const fix32<16> driving_frequ(1.0f * 2.f * 3.1415f); // 10 Hz driving frequency
+	const fix32<16> driving_amplitude(0.05f); //
 	const fix32<16> integrator_gain(1);
 
 	ExtremumSeekingController<fix32<16>> esc(sample_time, driving_frequ, driving_amplitude, integrator_gain);
@@ -87,17 +87,21 @@ int main(void){
 
 	uint16_t update_counter = 0;
 	uint16_t output_state = 0;
+	fix32<16> gain = 0;
+	fix32<16> increment(0.0001f);
+	cout << "increment: " << increment << endl;
 	while(1){
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
 			const auto U = output_voltage();
 			const auto I = output_current();
 			const auto P = U * I;
-			fix32<16> gain = esc.input(P);
+			gain += increment;//= esc.input(P);
+
 			set_duty_cycles(gain);
 
 			++update_counter;
-			if(update_counter>100){
+			if(update_counter>10){
 				update_counter = 0;
 				// output strip-mining to mitigate busy waiting
 				switch(output_state){
