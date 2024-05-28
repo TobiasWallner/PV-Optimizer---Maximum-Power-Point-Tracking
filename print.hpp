@@ -33,6 +33,9 @@ public:
 
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
 	friend UARTOutputStream& operator<<(UARTOutputStream& stream, Integer value){
+		if(value == 0){
+			return stream << '0';
+		}
 		char buffer[sizeof(Integer) * 8 / 3 + 1];
 		char* itr = &buffer[sizeof(Integer) * 8 / 3 + 1];
 		if(value < 0){
