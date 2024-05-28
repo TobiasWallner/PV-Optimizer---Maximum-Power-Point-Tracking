@@ -75,7 +75,7 @@ const INTERRUPT_t INTERRUPT_ADC_Voltage =
   .subpriority = 0,
 #endif  
 
-  .enable_at_init = true
+  .enable_at_init = false
 
 };
 const INTERRUPT_t INTERRUPT_ADC_Current =
@@ -89,6 +89,6 @@ const INTERRUPT_t INTERRUPT_ADC_Current =
   .subpriority = 0,
 #endif  
 
-  .enable_at_init = true
+  .enable_at_init = false
 
 };

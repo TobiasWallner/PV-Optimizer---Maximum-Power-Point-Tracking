@@ -195,22 +195,22 @@
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_0"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="95"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_res_Channel_B"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_1"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="115"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_res_Channel_C"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_2"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="135"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_res_Channel_D"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_3"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="155"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_res_Channel_E"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_4"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="175"/>
@@ -235,22 +235,22 @@
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_0"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="260"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_ch_Channel_B"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_1"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="280"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_ch_Channel_C"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_2"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="300"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_ch_Channel_D"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_3"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="320"/>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="event_ch_Channel_E"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_4"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="300" y="340"/>
@@ -278,22 +278,22 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_4"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="190"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="190"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_8"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="210"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="210"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_12"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="230"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="230"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_E_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_16"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="250"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="250"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_A_input"/>
@@ -318,7 +318,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_4"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="415"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="415"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_sync_slaveA_input"/>
@@ -338,7 +338,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_8"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="495"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="495"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_sync_slaveA_input"/>
@@ -358,7 +358,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_12"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="575"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="575"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_sync_slaveA_input"/>
@@ -378,7 +378,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_E_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_16"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="655"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="655"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_F_input"/>
@@ -565,7 +565,7 @@
     <children xsi:type="pi:ContainerShape" visible="true">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="301" height="20" x="20" y="20"/>
       <children visible="true">
-        <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="299" height="20" x="2" style="//@styles.0/@styles.1" horizontalAlignment="ALIGNMENT_CENTER" value="ADC_Voltage">
+        <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="299" height="20" x="2" style="//@styles.0/@styles.1" horizontalAlignment="ALIGNMENT_CENTER" value="ADC">
           <properties key="AppInstanceLabel" value="ADC_MEASUREMENT_ADV_0"/>
         </graphicsAlgorithm>
       </children>
@@ -577,43 +577,43 @@
     </children>
     <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_0"/>
-      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="90" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Voltage"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="90" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Vout_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_B"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_1"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="95"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_1"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="110" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_B"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="110" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_IL_filtered2"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_C"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_2"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="115"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_2"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="130" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_C"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="130" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Iin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_D"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_3"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="135"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_3"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="150" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_D"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="150" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_IL_filtered1"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_E"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_4"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="155"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="170" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_E"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="170" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Vin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_F"/>
@@ -649,43 +649,43 @@
     </children>
     <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_0"/>
-      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="255" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Voltage"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="255" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Vout_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_B"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_1"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="260"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_1"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="275" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_B"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="275" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_IL_filtered2"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_C"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_2"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="280"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_2"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="295" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_C"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="295" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Iin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_D"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_3"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="300"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_3"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="315" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_D"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="315" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_IL_filtered1"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_E"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_4"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="320"/>
     </children>
-    <children>
+    <children visible="true">
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_evt_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="335" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_E"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="335" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Vin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_F"/>
@@ -721,7 +721,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_0"/>
-      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="165" style="//@styles.0/@styles.2" value="Voltage_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="165" style="//@styles.0/@styles.2" value="Vout_filtered_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_B_sel"/>
@@ -730,7 +730,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="185" value="Channel_B_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="185" style="//@styles.0/@styles.2" value="IL_filtered2_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_C_sel"/>
@@ -739,7 +739,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_8"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="205" value="Channel_C_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="205" style="//@styles.0/@styles.2" value="Iin_filtered_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_D_sel"/>
@@ -748,7 +748,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_12"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="225" value="Channel_D_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="225" style="//@styles.0/@styles.2" value="IL_filtered1_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_E_sel"/>
@@ -757,7 +757,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_select_16"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="245" value="Channel_E_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="245" style="//@styles.0/@styles.2" value="Vin_filtered_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_A_input"/>
@@ -766,7 +766,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_0"/>
-      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="330" style="//@styles.0/@styles.2" value="Voltage_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="330" style="//@styles.0/@styles.2" value="Vout_filtered_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_A_sync_slaveA_input"/>
@@ -802,7 +802,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="410" value="Channel_B_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="410" style="//@styles.0/@styles.2" value="IL_filtered2_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_B_sync_slaveA_input"/>
@@ -838,7 +838,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_8"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="490" value="Channel_C_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="490" style="//@styles.0/@styles.2" value="Iin_filtered_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_C_sync_slaveA_input"/>
@@ -874,7 +874,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_12"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="570" value="Channel_D_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="570" style="//@styles.0/@styles.2" value="IL_filtered1_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_D_sync_slaveA_input"/>
@@ -910,7 +910,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_ch_gch_16"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="650" value="Channel_E_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="650" style="//@styles.0/@styles.2" value="Vin_filtered_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_F_input"/>
@@ -946,7 +946,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_bfl_out_result_0"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="195" height="20" x="120" y="835" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Voltage"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="195" height="20" x="120" y="835" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Vout_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="bound_fl_Channel_A_sync_slaveA"/>
@@ -982,7 +982,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_bfl_out_result_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="195" height="20" x="120" y="915" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Channel_B"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="195" height="20" x="120" y="915" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_IL_filtered2"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="bound_fl_Channel_B_sync_slaveA"/>
@@ -1045,7 +1045,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_bfl_out_result_8"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="995" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Channel_C"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="995" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Iin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="bound_fl_Channel_C_sync_slaveA"/>
@@ -1081,7 +1081,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_bfl_out_result_12"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="1080" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Channel_D"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="1080" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_IL_filtered1"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="bound_fl_Channel_D_sync_slaveA"/>
@@ -1117,7 +1117,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_bfl_out_result_16"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="1160" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Channel_E"/>
+      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="205" height="20" x="110" y="1160" horizontalAlignment="ALIGNMENT_RIGHT" value="bound_fl_Vin_filtered"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="scan_to_global"/>
@@ -1313,22 +1313,22 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_4"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="190"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="190"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_8"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="210"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="210"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_12"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="230"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="230"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_E_sel"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_16"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="250"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="250"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_A_input"/>
@@ -1353,7 +1353,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="415"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="415"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_B_sync_slaveA_input"/>
@@ -1373,7 +1373,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="495"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="495"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_C_sync_slaveA_input"/>
@@ -1393,7 +1393,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="575"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="575"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_D_sync_slaveA_input"/>
@@ -1413,7 +1413,7 @@
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_E_input"/>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16"/>
-      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.2" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="655"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.4" lineStyle="UNSPECIFIED" width="20" height="10" x="-20" y="655"/>
     </anchors>
     <anchors xsi:type="pi:BoxRelativeAnchor" active="true" referencedGraphicsAlgorithm="//@children.3/@graphicsAlgorithm/@graphicsAlgorithmChildren.0">
       <properties key="SignalName" value="Channel_F_input"/>
@@ -1621,7 +1621,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_evt_1"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="110" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_B"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="110" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_B"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_C"/>
@@ -1630,7 +1630,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_evt_2"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="130" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_C"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="130" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_C"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_D"/>
@@ -1639,7 +1639,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_evt_3"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="150" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_D"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="150" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_D"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_E"/>
@@ -1648,7 +1648,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_result_evt_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="170" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_E"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="170" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_res_Channel_E"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_res_Channel_F"/>
@@ -1693,7 +1693,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_evt_1"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="275" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_B"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="275" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_B"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_C"/>
@@ -1702,7 +1702,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_evt_2"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="295" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_C"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="295" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_C"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_D"/>
@@ -1711,7 +1711,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_evt_3"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="315" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_D"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="315" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_D"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_E"/>
@@ -1720,7 +1720,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_evt_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="335" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_E"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="135" height="20" x="180" y="335" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="event_ch_Channel_E"/>
     </children>
     <children visible="true" active="true">
       <properties key="SignalName" value="event_ch_Channel_F"/>
@@ -1765,7 +1765,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="185" value="Channel_B_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="185" style="//@styles.0/@styles.2" value="Channel_B_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_C_sel"/>
@@ -1774,7 +1774,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_8"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="205" value="Channel_C_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="205" style="//@styles.0/@styles.2" value="Channel_C_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_D_sel"/>
@@ -1783,7 +1783,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_12"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="225" value="Channel_D_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="225" style="//@styles.0/@styles.2" value="Channel_D_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_E_sel"/>
@@ -1792,7 +1792,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_select_16"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="245" value="Channel_E_sel"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="245" style="//@styles.0/@styles.2" value="Channel_E_sel"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_A_input"/>
@@ -1837,7 +1837,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_4"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="410" value="Channel_B_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="410" style="//@styles.0/@styles.2" value="Channel_B_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_B_sync_slaveA_input"/>
@@ -1873,7 +1873,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_8"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="490" value="Channel_C_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="490" style="//@styles.0/@styles.2" value="Channel_C_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_C_sync_slaveA_input"/>
@@ -1909,7 +1909,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_12"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="570" value="Channel_D_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="570" style="//@styles.0/@styles.2" value="Channel_D_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_D_sync_slaveA_input"/>
@@ -1945,7 +1945,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/1/vs_adc_adv_measurement_ch_gch_16"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="650" value="Channel_E_input"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.3" lineStyle="UNSPECIFIED" width="146" height="20" x="25" y="650" style="//@styles.0/@styles.2" value="Channel_E_input"/>
     </children>
     <children active="true">
       <properties key="SignalName" value="Channel_F_input"/>

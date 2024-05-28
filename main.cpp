@@ -14,15 +14,21 @@ extern "C"{
 #include <ExtremumSeekingController.hpp>
 #include "print.hpp"
 
+static inline uint32_t Vout_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_Vout_filtered_handle);}
+static inline uint32_t IL_filtered2_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_IL_filtered2_handle);}
+static inline uint32_t Iin_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_Iin_filtered_handle);}
+static inline uint32_t IL_filtered1_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_IL_filtered1_handle);}
+static inline uint32_t Vin_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_Vin_filtered_handle);}
+
 static inline fix32<16> output_voltage(){
 	static const fix32<16> factor(0.025671838831018513f);
-	return fix32<16>(adc_vout_raw_filtered) * factor;
+	return fix32<16>(Vout_filtered_raw()) * factor;
 }
 
 static inline fix32<16> coil_current(){
 	static const fix32<16> factor(0.00322265625f);
 	static const fix32<16> offset(6.6f);
-	return fix32<16>(adc_il_raw_filtered) * factor - offset;
+	return fix32<16>(Iin_filtered_raw()) * factor - offset;
 }
 
 static fix32<16> boost_loss(1L);
@@ -57,7 +63,6 @@ static inline void set_duty_cycles(fix32<16> gain){
 }
 
 
-
 int main(void){
 	DAVE_STATUS_t status;
 
@@ -74,7 +79,7 @@ int main(void){
 
 	// initialize the ESC
 	const fix32<16> sample_time(0.001f); // 1ms or 1kHz
-	const fix32<16> driving_frequ(1.0f * 2.f * 3.1415f); // 10 Hz driving frequency
+	const fix32<16> driving_frequ(0.1f * 2.f * 3.1415f);
 	const fix32<16> driving_amplitude(0.05f); //
 	const fix32<16> integrator_gain(1);
 
@@ -86,31 +91,26 @@ int main(void){
 	TIMER_Start(&TIMER_Controller_Clock);
 
 	uint16_t update_counter = 0;
-	uint16_t output_state = 0;
 	fix32<16> gain = 0;
 	fix32<16> increment(0.0001f);
-	cout << "increment: " << increment << endl;
+	//fix32<16> correlation_buffer[1000];
+	//auto ptr = correlation_buffer;
 	while(1){
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
 			const auto U = output_voltage();
 			const auto I = output_current();
 			const auto P = U * I;
-			gain += increment;//= esc.input(P);
+			gain = esc.input(P) + driving_amplitude*2;
+
+			//*(ptr++) = P;
 
 			set_duty_cycles(gain);
 
 			++update_counter;
-			if(update_counter>10){
+			if(update_counter>100){
 				update_counter = 0;
-				// output strip-mining to mitigate busy waiting
-				switch(output_state){
-					break; case 0: {cout << U << "V, "; ++output_state;}
-					break; case 1: {cout << I << "A, "; ++output_state;}
-					break; case 2: {cout << P << "W, "; ++output_state;}
-					break; case 3: {cout << gain << endl; output_state = 0;}
-
-				};
+				cout << U << "V, " << I << "A, " << P << "W, " << (gain*100) << "%" << endl;
 			}
 		}
 

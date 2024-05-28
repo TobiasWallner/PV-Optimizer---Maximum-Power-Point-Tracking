@@ -99,6 +99,10 @@
  * Instances this macro is generated.*/
 #define ADC_MEASUREMENT_ADV_MUX_USED (1U)
 
+/* If event configuration is not used by all the ADC_MEASUREMENT_ADV APP
+ * Instances this macro is generated. Needed for optimization of the code.*/
+#define ADC_MEASUREMENT_ADV_MUX_NOT_ALL_USED (1U)
+
 /* If SHS gain apart from 1:1 is needed and an alias channel is used by one of 
  * the ADC_MEASUREMENT_ADV APP Instances this macro is generated. Needed for correct configuration of the gain value.*/
 #define ADC_MEASUREMENT_ADV_SHS_GAIN_ALIAS (1U)
@@ -116,14 +120,50 @@
 #define ADC_MEASUREMENT_ADV_START_ADC (1U)
 
 
- /* Channel and result related macros for the instance ADC_Voltage*/
-#define ADC_Voltage_GROUP_PTR  ((XMC_VADC_GROUP_t*)(void*) VADC_G1)
+ /* Channel and result related macros for the instance ADC*/
+#define ADC_GROUP_PTR  ((XMC_VADC_GROUP_t*)(void*) VADC_G1)
 
-#define ADC_Voltage_Voltage  (ADC_Voltage_Voltage_handle)
-#define ADC_Voltage_Voltage_RES  (VADC_G1->RES[10])
+#define ADC_Vout_filtered  (ADC_Vout_filtered_handle)
+#define ADC_Vout_filtered_RES  (VADC_G1->RES[10])
+
+#define ADC_IL_filtered2  (ADC_IL_filtered2_handle)
+#define ADC_IL_filtered2_RES  (VADC_G1->RES[11])
+
+#define ADC_Iin_filtered  (ADC_Iin_filtered_handle)
+#define ADC_Iin_filtered_RES  (VADC_G1->RES[12])
+
+#define ADC_IL_filtered1  (ADC_IL_filtered1_handle)
+#define ADC_IL_filtered1_RES  (VADC_G1->RES[13])
+
+#define ADC_Vin_filtered  (ADC_Vin_filtered_handle)
+#define ADC_Vin_filtered_RES  (VADC_G1->RES[14])
 
 #ifndef VADC_QUEUE_GROUP_1_POSITION_0
 #define VADC_QUEUE_GROUP_1_POSITION_0 (0U)
+#else
+#error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
+#endif
+
+#ifndef VADC_QUEUE_GROUP_1_POSITION_1
+#define VADC_QUEUE_GROUP_1_POSITION_1 (1U)
+#else
+#error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
+#endif
+
+#ifndef VADC_QUEUE_GROUP_1_POSITION_2
+#define VADC_QUEUE_GROUP_1_POSITION_2 (2U)
+#else
+#error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
+#endif
+
+#ifndef VADC_QUEUE_GROUP_1_POSITION_3
+#define VADC_QUEUE_GROUP_1_POSITION_3 (3U)
+#else
+#error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
+#endif
+
+#ifndef VADC_QUEUE_GROUP_1_POSITION_4
+#define VADC_QUEUE_GROUP_1_POSITION_4 (4U)
 #else
 #error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
 #endif

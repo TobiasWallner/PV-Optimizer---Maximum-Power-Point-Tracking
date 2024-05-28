@@ -74,8 +74,8 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
-	 /**  Initialization of ADC_MEASUREMENT_ADV APP instance ADC_Voltage */
-	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_ADV_Init(&ADC_Voltage); 
+	 /**  Initialization of ADC_MEASUREMENT_ADV APP instance ADC */
+	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_ADV_Init(&ADC); 
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
