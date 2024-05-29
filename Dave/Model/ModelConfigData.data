@@ -60,9 +60,6 @@
   <nodes xsi:type="ApplicationModel:PeripheralNode">
     <resource xsi:type="ResourceModel:Peripheral" href="HW_RESOURCES/USIC0/USIC0_0.dd#/"/>
   </nodes>
-  <nodes xsi:type="ApplicationModel:AppNode">
-    <resource xsi:type="ResourceModel:App" href="APPS/TIMER/v4_1_12/TIMER_1.app#/"/>
-  </nodes>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.0" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.0"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.7" target="//@nodes.1"/>
@@ -72,7 +69,6 @@
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.17" target="//@nodes.16"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.18" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.18" target="//@nodes.14"/>
-  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.20" target="//@nodes.16"/>
   <hwConnections href="APPS/CLOCK_XMC1/v4_0_26/CLOCK_XMC1_0.app#//@connections.0"/>
   <hwConnections href="APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.0"/>
   <hwConnections href="APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_0.app#//@connections.1"/>
@@ -223,5 +219,4 @@
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.13"/>
   <hwConnections href="APPS/UART/v4_1_14/UART_0.app#//@connections.14"/>
   <hwConnections href="APPS/PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.16"/>
-  <hwConnections href="APPS/TIMER/v4_1_12/TIMER_1.app#//@connections.0"/>
 </ApplicationModel:ApplicationData>
