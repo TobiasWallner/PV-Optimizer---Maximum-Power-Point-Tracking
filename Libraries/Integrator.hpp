@@ -1,7 +1,9 @@
+#pragma once
 /*
 	Author: Tobias Wallner
 	tobias.wallner1@gmx.net
 */
+
 
 template<class T = float>
 class Integrator{
