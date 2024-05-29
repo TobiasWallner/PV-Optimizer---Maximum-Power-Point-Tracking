@@ -11,6 +11,8 @@ extern "C"{
 
 }
 #include <fix32.hpp>
+#include <SineGenerator.hpp>
+#include <Integrator.hpp>
 #include <ExtremumSeekingController.hpp>
 #include "print.hpp"
 
@@ -25,7 +27,7 @@ static inline fix32<16> output_voltage(){
 	return fix32<16>(Vout_filtered_raw()) * factor;
 }
 
-static inline fix32<16> coil_current(){
+static inline fix32<16> Iin_current(){
 	static const fix32<16> factor(0.00322265625f);
 	static const fix32<16> offset(6.6f);
 	return fix32<16>(Iin_filtered_raw()) * factor - offset;
@@ -34,7 +36,7 @@ static inline fix32<16> coil_current(){
 static fix32<16> boost_loss(1L);
 
 static inline fix32<16> output_current(){
-	return coil_current() * boost_loss;
+	return Iin_current() * boost_loss;
 }
 
 static inline fix32<16> output_power(){
@@ -52,6 +54,7 @@ static inline void set_duty_cycles(fix32<16> gain){
 		boost_loss = 1;
 		const uint32_t buck_pwm = static_cast<uint32_t>(gain * 10000L);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  buck_pwm);
+		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_2,  buck_pwm*3/4+1); // triggers the ADC just before the power pwm switches (+1 so that the ADC also triggers at 0% duty cycle)
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0L);
 	}else{
 		// boost mode
@@ -59,9 +62,29 @@ static inline void set_duty_cycles(fix32<16> gain){
 		const uint32_t boost_pwm = static_cast<uint32_t>((1L-boost_loss) * 10000L);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  10000UL);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  boost_pwm);
+		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_2,  boost_pwm*3/4+1); // triggers the ADC just before the power pwm switches (+1 so that the ADC also triggers at 0% duty cycle)
 	}
 }
 
+template<size_t N>
+class MovingAverage{
+	fix32<16> buffer[N]{};
+	fix32<16> sum = 0;
+	size_t index = 0;
+
+public:
+
+	inline MovingAverage(){for(fix32<16>& elem : buffer) elem = fix32<16>::reinterpret(0);}
+
+	inline fix32<16> input(fix32<16> value){
+		static const fix32<16> factor = 1 / fix32<16>(N);
+		sum += (value - buffer[index]);
+		buffer[index] = value;
+		index = (index < (N-1)) ? index+1 : 0;
+		return sum * factor;
+	}
+
+};
 
 int main(void){
 	DAVE_STATUS_t status;
@@ -77,40 +100,63 @@ int main(void){
 		}
 	}
 
-	// initialize the ESC
-	const fix32<16> sample_time(0.001f); // 1ms or 1kHz
-	const fix32<16> driving_frequ(0.1f * 2.f * 3.1415f);
-	const fix32<16> driving_amplitude(0.05f); //
-	const fix32<16> integrator_gain(1);
+	// initialize the extremum seeking controller parameters
+	const fix32<16> sample_time(0.01f); // 100Hz
+	const fix32<16> driving_frequ(1.f * 2.f * 3.1415f);
+	const fix32<16> driving_amplitude(0.05f);
+	const fix32<16> integrator_gain(10);
 
-	ExtremumSeekingController<fix32<16>> esc(sample_time, driving_frequ, driving_amplitude, integrator_gain);
+	// driv
+	SineGenerator<fix32<16>> sineGen(sample_time, driving_frequ, driving_amplitude);
+	MovingAverage<100> movingAverage; // moving average has to be as large as 1 sine period
+
+	Integrator<fix32<16>> integrator(sample_time, integrator_gain);
 
 	/* Start PWM */
 	PWM_CCU8_Start(&PWM_Buck);
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
-	uint16_t update_counter = 0;
-	fix32<16> gain = 0;
-	fix32<16> increment(0.0001f);
-	//fix32<16> correlation_buffer[1000];
-	//auto ptr = correlation_buffer;
+	//uint16_t update_counter = 0;
+	fix32<16> voltage_filtered_x(0);
+	fix32<16> voltage_filtered(0);
+
+	fix32<16> current_filtered_x(0);
+	fix32<16> current_filtered(0);
+
+	size_t update_state = 0;
+
 	while(1){
+		/*filter here instead of in the interrupts because interrupts would reduce performance too much*/
+		voltage_filtered_x = (voltage_filtered_x * 15 + output_voltage()*16)/16;
+		voltage_filtered = voltage_filtered_x/16;
+
+		current_filtered_x = (current_filtered_x * 15 + output_current()*16)/16;
+		current_filtered = current_filtered_x/16;
+
+
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
-			const auto U = output_voltage();
-			const auto I = output_current();
-			const auto P = U * I;
-			gain = esc.input(P) + driving_amplitude*2;
+			const fix32<16> U = voltage_filtered;
+			const fix32<16> I = current_filtered;
+			const fix32<16> P = U * I;
 
-			//*(ptr++) = P;
+			const fix32<16> sine = sineGen.next();
+			const fix32<16> correlation = movingAverage.input(P*sine);
+			const fix32<16> integrator_output = integrator.input(correlation);
 
+			const fix32<16> gain = sine + driving_amplitude + integrator_output;
 			set_duty_cycles(gain);
 
-			++update_counter;
-			if(update_counter>100){
-				update_counter = 0;
-				cout << U << "V, " << I << "A, " << P << "W, " << (gain*100) << "%" << endl;
+			// output data over multiple iterations to distribute the UART load for less busy waiting
+			switch(update_state){
+				break; case 0:{cout << U << "V, "; ++update_state;}
+				break; case 1:{cout << I << "A, "; ++update_state;}
+				break; case 2:{cout << P << "W, "; ++update_state;}
+				break; case 3:{cout << "gain: " << (gain*100) << "%"; ++update_state;}
+				break; case 4:{cout << ", corr: " << correlation; ++update_state;}
+				break; case 5:{cout << ", integ: " << integrator_output; ++update_state;}
+				default: {cout << endl; update_state=0;}
 			}
 		}
 
