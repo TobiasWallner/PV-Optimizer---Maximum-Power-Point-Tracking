@@ -9,6 +9,7 @@
             <BindMap MUri="port/p/0/pad/14" Proxy="app/CPU_CTRL_XMC1/0/hwres_swd0_0"/>
             <BindMap MUri="port/p/1/pad/3" Proxy="app/UART/0/hwres_port_pad_uart_rx"/>
             <BindMap MUri="port/p/2/pad/10" Proxy="app/ADC_MEASUREMENT_ADV/0/rarray_hwres_adc_adv_measurement_channel_pin#16"/>
+            <BindMap MUri="peripheral/ccu4/0/cc4/1" Proxy="app/TIMER/1/hwres_ccu4_cc4"/>
             <BindMap MUri="peripheral/scu/0/gcu/ccu4_global_enable/0" Proxy="app/GLOBAL_CCU4/0/hwres_peripheral_scu_gcu_ccu4_global_enable"/>
             <BindMap MUri="port/p/2/pad/9" Proxy="app/ADC_MEASUREMENT_ADV/0/rarray_hwres_adc_adv_measurement_channel_pin#12"/>
             <BindMap MUri="port/p/0/pad/5" Proxy="app/PWM_CCU8/0/hwres_port_ch1_out1"/>
