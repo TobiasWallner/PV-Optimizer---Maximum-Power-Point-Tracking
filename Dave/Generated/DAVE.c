@@ -79,11 +79,6 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {
-	 /**  Initialization of ADC_MEASUREMENT_ADV APP instance ADC_Current */
-	 init_status = (DAVE_STATUS_t)ADC_MEASUREMENT_ADV_Init(&ADC_Current); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
 	 /**  Initialization of PWM_CCU8 APP instance PWM_Buck */
 	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_Buck); 
    } 
@@ -91,16 +86,6 @@ __WEAK DAVE_STATUS_t DAVE_Init(void)
   {
 	 /**  Initialization of PWM_CCU8 APP instance PWM_Boost */
 	 init_status = (DAVE_STATUS_t)PWM_CCU8_Init(&PWM_Boost); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of INTERRUPT APP instance INTERRUPT_ADC_Voltage */
-	 init_status = (DAVE_STATUS_t)INTERRUPT_Init(&INTERRUPT_ADC_Voltage); 
-   } 
-  if (init_status == DAVE_STATUS_SUCCESS)
-  {
-	 /**  Initialization of INTERRUPT APP instance INTERRUPT_ADC_Current */
-	 init_status = (DAVE_STATUS_t)INTERRUPT_Init(&INTERRUPT_ADC_Current); 
    } 
   if (init_status == DAVE_STATUS_SUCCESS)
   {

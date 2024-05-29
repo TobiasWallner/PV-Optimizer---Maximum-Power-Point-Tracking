@@ -95,14 +95,6 @@
  * Instances this macro is generated*/
 #define ADC_MEASUREMENT_ADV_QUEUE_USED (1U)
 
-/* If event configuration is used by any of the ADC_MEASUREMENT_ADV APP
- * Instances this macro is generated.*/
-#define ADC_MEASUREMENT_ADV_MUX_USED (1U)
-
-/* If event configuration is not used by all the ADC_MEASUREMENT_ADV APP
- * Instances this macro is generated. Needed for optimization of the code.*/
-#define ADC_MEASUREMENT_ADV_MUX_NOT_ALL_USED (1U)
-
 /* If SHS gain apart from 1:1 is needed and an alias channel is used by one of 
  * the ADC_MEASUREMENT_ADV APP Instances this macro is generated. Needed for correct configuration of the gain value.*/
 #define ADC_MEASUREMENT_ADV_SHS_GAIN_ALIAS (1U)
@@ -164,18 +156,6 @@
 
 #ifndef VADC_QUEUE_GROUP_1_POSITION_4
 #define VADC_QUEUE_GROUP_1_POSITION_4 (4U)
-#else
-#error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
-#endif
-
- /* Channel and result related macros for the instance ADC_Current*/
-#define ADC_Current_GROUP_PTR  ((XMC_VADC_GROUP_t*)(void*) VADC_G0)
-
-#define ADC_Current_Current  (ADC_Current_Current_handle)
-#define ADC_Current_Current_RES  (VADC_G0->RES[10])
-
-#ifndef VADC_QUEUE_GROUP_0_POSITION_0
-#define VADC_QUEUE_GROUP_0_POSITION_0 (0U)
 #else
 #error "Redefined the same Queue position. Please change the queue position to a different value in the UI editor of the APP"
 #endif

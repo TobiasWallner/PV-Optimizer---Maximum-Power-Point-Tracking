@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Peripheral xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/1.40.1/peripheral/vadc/0" description="VADC Device Description" baseAddress="0x48030000">
   <provided xsi:type="ResourceModel:ResourceGroup" name="10" URI="http://resources/1.40.1/peripheral/vadc/0/group/0/result/10">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.60"/>
     <resourcesList name="grcr" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0rcr10"/>
     <resourcesList name="gres" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0res10"/>
     <resourcesList name="gresd" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0resd10"/>
@@ -157,7 +156,6 @@
   <provided xsi:type="ResourceModel:BitField" name="XTSEL" URI="http://resources/1.40.1/peripheral/vadc/0/g0asctrl/xtsel" value="0" toolTipHelpDescription="External Trigger Input Selection" defaultValue="0" startPos="8" stopPos="11" accessPermission="rw" maxValue="15" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="GTSEL" URI="http://resources/1.40.1/peripheral/vadc/0/g0asctrl/gtsel" value="0" toolTipHelpDescription="Gate Input Selection" defaultValue="0" startPos="16" stopPos="19" accessPermission="rw" maxValue="15" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/1.40.1/peripheral/vadc/0/group/0/ch/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.40"/>
     <resourcesList name="gchass_assch" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0chass/assch0"/>
     <resourcesList name="gchctr" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0chctr0"/>
     <resourcesList name="gcefclr_cev" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0cefclr/cev0"/>
@@ -323,7 +321,6 @@
     <resourcesList name="global_signal" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g_global_signal"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/1.40.1/peripheral/vadc/0/group/0/class/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.394"/>
     <resourcesList name="giclass" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0iclass0"/>
     <resourcesList name="scan_class_sel" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0_scan_class_sel0"/>
     <resourcesList name="queue_class_sel" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0_queue_class_sel0"/>
@@ -813,7 +810,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1xxx" description="Reserved"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="queue" URI="http://resources/1.40.1/peripheral/vadc/0/group/0/queue">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.392"/>
     <resourcesList name="garbpr_prio" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0arbpr/prio0"/>
     <resourcesList name="garbpr_csm" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0arbpr/csm0"/>
     <resourcesList name="garbpr_asen" requiredResourceUri="http://resources/1.40.1/peripheral/vadc/0/g0arbpr/asen0"/>

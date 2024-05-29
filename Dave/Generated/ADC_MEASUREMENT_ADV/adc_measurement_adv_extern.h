@@ -102,8 +102,5 @@ extern const ADC_MEASUREMENT_ADV_CHANNEL_t  ADC_IL_filtered2_handle;
 extern const ADC_MEASUREMENT_ADV_CHANNEL_t  ADC_Iin_filtered_handle;
 extern const ADC_MEASUREMENT_ADV_CHANNEL_t  ADC_IL_filtered1_handle;
 extern const ADC_MEASUREMENT_ADV_CHANNEL_t  ADC_Vin_filtered_handle;
-extern const ADC_MEASUREMENT_ADV_t ADC_Current;
-
-extern const ADC_MEASUREMENT_ADV_CHANNEL_t  ADC_Current_Current_handle;
 #endif /* ADC_MEASUREMENT_ADV_EXTERN_H */
 

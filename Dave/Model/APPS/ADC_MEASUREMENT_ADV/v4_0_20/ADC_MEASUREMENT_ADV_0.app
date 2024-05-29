@@ -9,7 +9,7 @@
   <virtualSignals name="group_selection" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_to_config" hwSignal="req" hwResource="//@hwResources.392"/>
   <virtualSignals name="queue_to_global" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_to_global" hwSignal="global_signal" hwResource="//@hwResources.392"/>
   <virtualSignals name="trigger_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_greqtr0sel" hwSignal="greqtr0sel" hwResource="//@hwResources.392" visible="true">
-    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.17"/>
+    <upwardMapList xsi:type="ResourceModel:Connections" href="../../PWM_CCU8/v4_1_32/PWM_CCU8_0.app#//@connections.16"/>
   </virtualSignals>
   <virtualSignals name="gating_input" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_greqgt0sel" hwSignal="greqgt0sel" hwResource="//@hwResources.392" visible="true"/>
   <virtualSignals name="event_queue_source" URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_sourceevent" hwSignal="sev" hwResource="//@hwResources.392" visible="true"/>
@@ -7302,8 +7302,4 @@
   </connections>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_scan_sourceevent/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_nvic_src" systemDefined="true" sourceSignal="event_scan_source" targetSignal="sr_interrupt_signal" required="false" srcVirtualSignal="//@virtualSignals.17" targetVirtualSignal="//@virtualSignals.0"/>
   <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_queue_sourceevent/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_measurement_adv_nvic_src" systemDefined="true" sourceSignal="event_queue_source" targetSignal="sr_interrupt_signal" required="false" srcVirtualSignal="//@virtualSignals.9" targetVirtualSignal="//@virtualSignals.0"/>
-  <connections URI="http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/http://resources/4.0.20/app/ADC_MEASUREMENT_ADV/0/vs_adc_adv_measurement_result_evt_0/http://resources/4.0.10/app/INTERRUPT/0/vs_nvic_signal_in" sourceSignal="event_res_Voltage" targetSignal="sr_irq" srcVirtualSignal="//@virtualSignals.150">
-    <downwardMapList xsi:type="ResourceModel:VirtualSignal" href="../../INTERRUPT/v4_0_10/INTERRUPT_0.app#//@virtualSignals.0"/>
-    <targetVirtualSignal href="../../INTERRUPT/v4_0_10/INTERRUPT_0.app#//@virtualSignals.0"/>
-  </connections>
 </ResourceModel:App>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:DevicePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/VQFN40.0.0/devicepackage/0">
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/vqfn40.0.0/devicepackage/0/3">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ADC_MEASUREMENT_ADV/v4_0_20/ADC_MEASUREMENT_ADV_1.app#//@hwResources.20"/>
     <resourcesList name="pin" requiredResourceUri="http://resources/VQFN40.0.0/devicepackage/0/pin3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="4" URI="http://resources/vqfn40.0.0/devicepackage/0/4">

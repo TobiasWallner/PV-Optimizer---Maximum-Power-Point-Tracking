@@ -64,16 +64,13 @@
 #include "PWM_CCU8/pwm_ccu8.h"
   
 
-#include "CPU_CTRL_XMC1/cpu_ctrl_xmc1.h"
-  
-
-#include "INTERRUPT/interrupt.h"
-  
-
 #include "GLOBAL_CCU4/global_ccu4.h"
   
 
 #include "TIMER/timer.h"
+  
+
+#include "CPU_CTRL_XMC1/cpu_ctrl_xmc1.h"
   
 
 #include "UART/uart.h"
