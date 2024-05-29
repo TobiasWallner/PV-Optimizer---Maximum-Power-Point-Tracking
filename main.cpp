@@ -62,7 +62,7 @@ static inline void set_duty_cycles(fix32<16> gain){
 		const uint32_t boost_pwm = static_cast<uint32_t>((1L-boost_loss) * 10000L);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  10000UL);
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Boost,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  boost_pwm);
-		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_2,  boost_pwm*3/4+1); // triggers the ADC just before the power pwm switches (+1 so that the ADC also triggers at 0% duty cycle)
+		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_2,  9900UL); // triggers the ADC measurement in the throughput time and not when the boost coil is being charged
 	}
 }
 
@@ -106,34 +106,26 @@ int main(void){
 	const fix32<16> driving_amplitude(0.05f);
 	const fix32<16> integrator_gain(10);
 
-	// driv
+	// ESC components
 	SineGenerator<fix32<16>> sineGen(sample_time, driving_frequ, driving_amplitude);
-	MovingAverage<100> movingAverage; // moving average has to be as large as 1 sine period
-
+	MovingAverage<100> movingAverageCorrelation; // moving average has to be as large as 1 sine period
 	Integrator<fix32<16>> integrator(sample_time, integrator_gain);
+
+	// measurement filters
+	MovingAverage<16> movingAverageVoltage;
+	MovingAverage<16> movingAverageCurrent;
 
 	/* Start PWM */
 	PWM_CCU8_Start(&PWM_Buck);
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
-	//uint16_t update_counter = 0;
-	fix32<16> voltage_filtered_x(0);
-	fix32<16> voltage_filtered(0);
-
-	fix32<16> current_filtered_x(0);
-	fix32<16> current_filtered(0);
-
 	size_t update_state = 0;
 
 	while(1){
 		/*filter here instead of in the interrupts because interrupts would reduce performance too much*/
-		voltage_filtered_x = (voltage_filtered_x * 15 + output_voltage()*16)/16;
-		voltage_filtered = voltage_filtered_x/16;
-
-		current_filtered_x = (current_filtered_x * 15 + output_current()*16)/16;
-		current_filtered = current_filtered_x/16;
-
+		const fix32<16> voltage_filtered = movingAverageVoltage.input(output_voltage());
+		const fix32<16> current_filtered = movingAverageCurrent.input(output_current());
 
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
@@ -142,7 +134,7 @@ int main(void){
 			const fix32<16> P = U * I;
 
 			const fix32<16> sine = sineGen.next();
-			const fix32<16> correlation = movingAverage.input(P*sine);
+			const fix32<16> correlation = movingAverageCorrelation.input(P*sine);
 			const fix32<16> integrator_output = integrator.input(correlation);
 
 			const fix32<16> gain = sine + driving_amplitude + integrator_output;
