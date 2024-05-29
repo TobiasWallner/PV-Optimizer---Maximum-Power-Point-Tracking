@@ -1,10 +1,12 @@
+#pragma once
 /*
+
 	Author: Tobias Wallner
 	tobias.wallner1@gmx.net
 	
 */
 
-#pragma once
+
 
 #include <cinttypes>
 #include <type_traits>
@@ -75,16 +77,37 @@ public:
 		return fix32::reinterpret(static_cast<int32_t>(static_cast<uint32_t>(temp >> fractional_bits)));
 	}
 	
+	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
+	inline friend fix32 operator* (fix32 lhs, Integer rhs){
+		return fix32::reinterpret(lhs.value * rhs);
+	}
+
+	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
+	inline friend fix32 operator* (Integer lhs, fix32 rhs){
+		return fix32::reinterpret(lhs * rhs.value);
+	}
+
 	inline friend fix32 operator/ (fix32 lhs, fix32 rhs){
 		int64_t temp = (static_cast<int64_t>(lhs.value) << fractional_bits) / static_cast<int64_t>(rhs.value);
 		return fix32::reinterpret(static_cast<int32_t>(temp));
 	}
 	
+	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
+	inline friend fix32 operator/ (fix32 lhs, Integer rhs){
+		return fix32::reinterpret(lhs.value / rhs);
+	}
+
 	inline fix32& operator+= (fix32 rhs){return *this = *this + rhs;}
 	inline fix32& operator-= (fix32 rhs){return *this = *this - rhs;}
 	inline fix32& operator*= (fix32 rhs){return *this = *this * rhs;}
 	inline fix32& operator/= (fix32 rhs){return *this = *this / rhs;}
 	
+	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
+	inline fix32& operator*= (Integer rhs){return this->value = this->value * rhs;}
+
+	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
+	inline fix32& operator/= (Integer rhs){return this->value = this->value / rhs;}
+
 	// Comparison operators
 	inline friend bool operator== (fix32 lhs, fix32 rhs){return lhs.value == rhs.value;}
 	inline friend bool operator!= (fix32 lhs, fix32 rhs){return lhs.value != rhs.value;}
