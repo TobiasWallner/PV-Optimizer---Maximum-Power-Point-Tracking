@@ -39,7 +39,7 @@ int main(void){
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
-	BodeMeasurement();
-	//ExtremumSeekingController();
+	//while(true) BodeMeasurement();
+	ExtremumSeekingController();
 }
 
