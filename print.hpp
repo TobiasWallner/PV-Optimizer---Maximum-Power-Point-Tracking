@@ -7,6 +7,9 @@
  */
 
 #pragma once
+extern "C"{
+	#include <DAVE.h>
+}
 #include <cstring>
 #include <cstdio>
 #include <ostream>
