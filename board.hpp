@@ -14,29 +14,34 @@ static inline uint32_t Iin_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(
 static inline uint32_t IL_filtered1_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_IL_filtered1_handle);}
 static inline uint32_t Vin_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_Vin_filtered_handle);}
 
-static inline fix32<16> output_voltage(){
-	static const fix32<16> factor(0.025671838831018513f);
-	return fix32<16>(Vout_filtered_raw()) * factor;
+template<class T = fix32<16>>
+static inline T output_voltage(){
+	static const T factor(0.025671838831018513f);
+	return T(Vout_filtered_raw()) * factor;
 }
 
-static inline fix32<16> Iin_current(){
-	static const fix32<16> factor(0.00322265625f);
-	static const fix32<16> offset(6.6f);
-	return fix32<16>(Iin_filtered_raw()) * factor - offset;
+template<class T = fix32<16>>
+static inline T Iin_current(){
+	static const T factor(0.00322265625f);
+	static const T offset(6.6f);
+	return T(Iin_filtered_raw()) * factor - offset;
 }
 
 static fix32<16> boost_loss(1L);
 
-static inline fix32<16> output_current(){
+template<class T = fix32<16>>
+static inline T output_current(){
 	return Iin_current() * boost_loss;
 }
 
-static inline fix32<16> output_power(){
+template<class T = fix32<16>>
+static inline T output_power(){
 	return output_voltage() * output_current(); // boost_loss ... because parts of the current used for boost is put into ground instead of the output
 }
 
 // gain between 0 and 1 for boost and greater 1 for buck.
-static inline void set_duty_cycles(fix32<16> gain){
+template<class T = fix32<16>>
+static inline void set_duty_cycles(T gain){
 	if(gain <= 0L){
 		boost_loss = 1;
 		PWM_CCU8_SetDutyCycleSymmetric(&PWM_Buck,  XMC_CCU8_SLICE_COMPARE_CHANNEL_1,  0L);
