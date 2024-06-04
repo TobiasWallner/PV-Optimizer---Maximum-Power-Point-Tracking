@@ -17,7 +17,7 @@
 void BodeMeasurement(){
 	// ! Expects the timer to trigger at 1 kHz !
 
-	const fix32<16> sample_time(0.01f); // 1 Hz
+	const fix32<16> sample_time(0.001f);
 	const fix32<16> driving_frequ(1.f * 2.f * 3.1415f);
 	const fix32<16> driving_amplitude(0.05f);
 
@@ -81,10 +81,10 @@ void BodeMeasurement(){
 }
 
 void ExtremumSeekingController(){
-	// ! Expects the timer to trigger at 100Hz !
+	// ! Expects the timer to trigger at 1 kHz !
 
 	// initialize the extremum seeking controller parameters
-	const fix32<16> sample_time(0.01f); // 100Hz
+	const fix32<16> sample_time(0.001f);
 	const fix32<16> driving_frequ(1.f * 2.f * 3.1415f);
 	const fix32<16> driving_amplitude(0.05f);
 	const fix32<16> integrator_gain(10);
