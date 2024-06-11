@@ -369,16 +369,16 @@
 
         const XMC_CCU8_SLICE_DEAD_TIME_CONFIG_t  PWM_Boost_dt_config = 
             {
-              .enable_dead_time_channel1         = 0U,
+              .enable_dead_time_channel1         = 1U,
               .enable_dead_time_channel2         = 0U,
-              .channel1_st_path                  = 0U,
-              .channel1_inv_st_path              = 0U,
+              .channel1_st_path                  = 1U,
+              .channel1_inv_st_path              = 1U,
               .channel2_st_path                  = 0U,
               .channel2_inv_st_path              = 0U,
               .div                               = (uint32_t)XMC_CCU8_SLICE_DTC_DIV_1,
         
-              .channel1_st_rising_edge_counter   = 0U,
-              .channel1_st_falling_edge_counter  = 0U,
+              .channel1_st_rising_edge_counter   = 4U,
+              .channel1_st_falling_edge_counter  = 4U,
         
               .channel2_st_rising_edge_counter   = 0U,
               .channel2_st_falling_edge_counter  = 0U,
