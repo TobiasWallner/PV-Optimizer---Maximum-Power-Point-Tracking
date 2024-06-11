@@ -79,7 +79,7 @@ public:
 	
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
 	inline friend fix32 operator* (fix32 lhs, Integer rhs){
-		return fix32::reinterpret(lhs.value * rhs);
+		return fix32::reinterpret(lhs.value * static_cast<int32_t>(rhs));
 	}
 
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
@@ -94,7 +94,8 @@ public:
 	
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
 	inline friend fix32 operator/ (fix32 lhs, Integer rhs){
-		return fix32::reinterpret(lhs.value / rhs);
+		return fix32::reinterpret(lhs.value / static_cast<int32_t>(rhs));
+		// extra cast because the internal division library has a faulty unsigned division -> only signed
 	}
 
 	inline fix32& operator+= (fix32 rhs){return *this = *this + rhs;}
@@ -103,10 +104,10 @@ public:
 	inline fix32& operator/= (fix32 rhs){return *this = *this / rhs;}
 	
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
-	inline fix32& operator*= (Integer rhs){return this->value = this->value * rhs;}
+	inline fix32& operator*= (Integer rhs){return this->value = this->value * static_cast<int32_t>(rhs);}
 
 	template<typename Integer, std::enable_if_t<std::is_integral<Integer>::value, bool> = true>
-	inline fix32& operator/= (Integer rhs){return this->value = this->value / rhs;}
+	inline fix32& operator/= (Integer rhs){return this->value = this->value / static_cast<int32_t>(rhs);}
 
 	// Comparison operators
 	inline friend bool operator== (fix32 lhs, fix32 rhs){return lhs.value == rhs.value;}
