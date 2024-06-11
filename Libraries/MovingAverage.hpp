@@ -20,7 +20,8 @@ public:
 		this->_sum += (value - this->_buffer[this->_index]);
 		this->_buffer[this->_index] = value;
 		this->_index = (this->_index < (N-1)) ? this->_index+1 : 0;
-		return this->_sum / N;
+		T result = this->_sum / N;
+		return result;
 	}
 
 	inline T sum() const {return this->_sum;}
