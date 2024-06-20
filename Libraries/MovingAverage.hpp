@@ -27,4 +27,14 @@ public:
 	inline T sum() const {return this->_sum;}
 	inline T average() const {return this->_sum/N;}
 
+	template<class Stream>
+	friend Stream& operator << (Stream& stream, const MovingAverage& ma){
+		stream << "sum: " << ma.sum() << "\n";
+		stream << "values: ";
+		for (const auto& elem : ma._buffer){
+			stream << elem << ", ";
+		}
+	}
+
+
 };
