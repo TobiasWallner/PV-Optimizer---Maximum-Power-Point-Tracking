@@ -110,7 +110,7 @@ void ExtremumSeekingController(){
 	// initialize the extremum seeking controller parameters
 	const fix32<16> sample_time(0.001f);
 	const fix32<16> driving_frequ(10.f * 2.f * 3.1415f);
-	const fix32<16> driving_amplitude(0.05f);
+	const fix32<16> driving_amplitude(0.1f);
 	const fix32<16> integrator_gain(1);
 	const fix32<16> correlation_gain(1);
 	const fix32<16> start_offset(0.1);
