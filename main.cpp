@@ -40,51 +40,7 @@ int main(void){
 	TIMER_Start(&TIMER_Controller_Clock);
 
 	//while(true) BodeMeasurement();
-	//ExtremumSeekingController();
+	ExtremumSeekingController();
 
-	uint32_t duty_cycle = 60;
-	auto DutyType = DutyCycleType::boost;
-	setDutyCycle(duty_cycle * 100, DutyType);
-
-	uint32_t update_counter = 0;
-
-	MovingAverage<fix32<16>, 50> ma_Vout_filtered_raw;
-	MovingAverage<fix32<16>, 50> ma_Vin_filtered_raw;
-	MovingAverage<fix32<16>, 50> ma_Iin_filtered_raw;
-	MovingAverage<fix32<16>, 50> ma_IL_filtered1_raw;
-	MovingAverage<fix32<16>, 50> ma_IL_filtered2_raw;
-
-
-	while(true){
-		ma_Vout_filtered_raw.input(convert_raw_adc_to_volt(Vout_filtered_raw()));
-		ma_Vin_filtered_raw.input(convert_raw_adc_to_volt(Vin_filtered_raw()));
-		ma_Iin_filtered_raw.input(convert_raw_adc_to_ampere(Iin_filtered_raw()));
-		ma_IL_filtered1_raw.input(convert_raw_adc_to_ampere(IL_filtered1_raw()));
-		ma_IL_filtered2_raw.input(convert_raw_adc_to_ampere(IL_filtered2_raw()));
-
-
-		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
-			TIMER_ClearEvent (&TIMER_Controller_Clock);
-
-			if (update_counter > 500){
-				update_counter = 0;
-
-				cout << duty_cycle << ", ";
-				cout << ((DutyType == DutyCycleType::buck) ? "buck" : "boost") << ", ";
-				cout << ma_Vout_filtered_raw.average() << ", ";
-				cout << ma_Vin_filtered_raw.average() << ", ";
-
-				cout << ma_Iin_filtered_raw.average() << ", ";
-				cout << ma_IL_filtered1_raw.average() << ", ";
-				cout << ma_IL_filtered2_raw.average() << ", ";
-				cout << endl;
-
-
-			}
-			++update_counter;
-
-		}
-
-	}
 }
 
