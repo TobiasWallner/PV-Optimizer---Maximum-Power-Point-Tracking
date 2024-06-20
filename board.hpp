@@ -88,6 +88,6 @@ inline void set_duty_cycles(T gain){
 		// boost mode
 		boost_loss = 1L/gain;
 		const uint32_t boost_pwm = static_cast<uint32_t>((1L-boost_loss) * 10000L);
-		setDutyCycle(boost_pwm, DutyCycleType::buck);
+		setDutyCycle(boost_pwm, DutyCycleType::boost);
 	}
 }
