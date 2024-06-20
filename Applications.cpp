@@ -109,15 +109,15 @@ void ExtremumSeekingController(){
 
 	// initialize the extremum seeking controller parameters
 	const fix32<16> sample_time(0.001f);
-	const fix32<16> driving_frequ(10.f * 2.f * 3.1415f);
-	const fix32<16> driving_amplitude(0.1f);
+	const fix32<16> driving_frequ(20.f * 2.f * 3.1415f);
+	const fix32<16> driving_amplitude(0.02f);
 	const fix32<16> integrator_gain(1);
-	const fix32<16> correlation_gain(1);
-	const fix32<16> start_offset(0.1);
+	const fix32<16> correlation_gain(4);
+	const fix32<16> start_offset(driving_amplitude);
 
 	// ESC components
 	SineGenerator<fix32<16>> sineGen(sample_time, driving_frequ, driving_amplitude);
-	MovingAverage<fix32<16>, 100> movingAverageCorrelation; // moving average has to be as large as 1 sine period
+	MovingAverage<fix32<16>, 50> movingAverageCorrelation; // moving average has to be as large as 1 sine period
 	Integrator<fix32<16>> integrator(sample_time, integrator_gain);
 
 	size_t update_counter = 0;
@@ -138,26 +138,21 @@ void ExtremumSeekingController(){
 			const fix32<16> correlation = movingAverageCorrelation.sum(); // use the sum instead of the average to not loose information
 			const fix32<16> integrator_output = integrator.input(correlation);
 
-			if(integrator_output < 0) integrator.reset(); // prevent integrator from integrating into negative numbers for ever.
+			if(integrator_output < fix32<16>(-0.1f)) integrator.reset(); // prevent integrator from integrating into negative numbers for ever.
 
 			const fix32<16> gain = sine + start_offset + integrator_output;
 			set_duty_cycles(gain);
 
 			if (update_counter > 100){
 				update_counter = 0;
-				switch(update_state){
-					break; case 0:{cout << U << ", "; ++update_state;}
-					break; case 1:{cout << I << ", "; ++update_state;}
-					break; case 2:{cout << P << ", "; ++update_state;}
-					break; case 3:{cout << gain << ", "; ++update_state;}
-					break; case 4:{cout << correlation << ", "; ++update_state;}
-					break; case 5:{cout << integrator_output << endl; update_state=0;}
-					break; default: {cout << endl; update_state=0;}
-				}
+				cout << U << ", ";
+				cout << I << ", ";
+				cout << P << ", ";
+				cout << gain << ", ";
+				cout << correlation << ", ";
+				cout << integrator_output << "\n";
 			}
 			++update_counter;
-			// output data over multiple iterations to distribute the UART load for less busy waiting
-
 		}
 
 	}
