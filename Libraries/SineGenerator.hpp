@@ -3,6 +3,11 @@
  * Author: Tobias Wallner
  * 	tobias.wallner1@gmx.net
  * */
+ 
+ /*
+	An efficient sine generator derived from the differential equations of a wave function and
+	discretised using eulers method instead of exact discretisation.
+ */
 
 template<class T = float>
 class SineGenerator{
@@ -15,8 +20,8 @@ private:
 	
 public:
 	
-	// note that phi_rad is only defined in the intervall [0, 2*pi]
-	SineGenerator(T sample_time_s, T freq_rad_s, T amplitude = 1L, T phi_rad = 0.f)
+	// constructs a sine generator based on the sample time, output frequency, amplitude and 
+	SineGenerator(T sample_time_s, T freq_rad_s, T amplitude = 1L)
 		: sin_w_t(T(0L))
 		, cos_w_t(T(1L))
 		, w(freq_rad_s)
@@ -27,22 +32,21 @@ public:
 		this->w = freq_rad_s;
 	}
 	
+	// set the sample time
 	 void set_sample_time(T sample_time_s){
 		this->dt = sample_time_s;
 	}
 	
-	// note that phi_rad is only defined in the intervall [0, 2*pi]
-	 void set_phi(T phi_rad){
-		this->sin_w_t = fast_sine(phi_rad);
-		this->cos_w_t = fast_cosine(phi_rad);
-	}
-	
+	// reset internal states
 	 void reset(){
 		this->sin_w_t = T(0);
 		this->cos_w_t = T(1);
 	}
-		
+	
+	// get the current value of the sine without advancing it
 	 T sine() const {return this->sin_w_t * this->amplitude;}
+	 
+	// get the current value of the cosine without advancing it
 	 T cosine() const {return this->cos_w_t * this->amplitude;}
 	
 	// returns the current sine
@@ -60,6 +64,7 @@ public:
 		return ((one - abs_t) * this->sin_w_t + abs_t * this->cos_w_t) * v * this->amplitude;
 	}
 	
+	// advance the sine generator and returns the current value of the sine. 
 	 T next() {
 		const T result = this->sine();
 		this->cos_w_t -= (this->sin_w_t * this->w) * this->dt;

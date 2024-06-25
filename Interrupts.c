@@ -5,6 +5,11 @@
  *      Author: SirTobi
  */
 
+/*
+	!!! This file is depreciated !!!
+	It seemend the ADC interrupts came too often stalling the normal operation of the CPU
+*/
+
 #include <DAVE.h>
 
 uint32_t adc_vout_raw_filtered = 0;

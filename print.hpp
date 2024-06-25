@@ -14,20 +14,24 @@ extern "C"{
 #include <cstdio>
 #include <ostream>
 
+/* print a char over the UART_0 module */
 inline void print(char c){
 	while(UART_IsTXFIFOFull(&UART_0)){/*wait*/}
 	UART_TransmitWord (&UART_0, static_cast<uint8_t>(c));
 }
 
+/* print a string over the UART_0 module with a given count*/
 inline void print(const char* s, size_t count){
 	for(size_t i = 0; i < count; ++i){print(s[i]);}
 }
 
+/* print a terminated string over the UART_0 module */
 inline void print(const char* s){
 	size_t count = std::strlen(s);
 	print(s, count);
 }
 
+/* Streaming class that provides basic streaming functionality for the UART_0 module */
 class UARTOutputStream {
 public:
 	friend inline UARTOutputStream& operator<<(UARTOutputStream& stream, const char* s){print(s); return stream;}
@@ -64,5 +68,6 @@ public:
 
 };
 
+/* define and output stream 'cout' that can be used as a replacement for std::cout */
 static UARTOutputStream cout;
 static char endl = '\n';

@@ -6,6 +6,12 @@
 	
 */
 
+/*
+	A fixpoint value type that provides a user selectable number of fractional bits
+	
+	Supports all basic arithmetical and compare operators.
+	Works well together with fixpoints that have a different binary point, floating point numbers and integral values. 
+*/
 
 #include <cstddef>
 #include <cinttypes>

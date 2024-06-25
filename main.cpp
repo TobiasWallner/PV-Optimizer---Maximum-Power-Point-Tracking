@@ -28,7 +28,6 @@ int main(void){
 	if(status == DAVE_STATUS_FAILURE){
 		/* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
 		XMC_DEBUG("DAVE APPs initialization failed\n");
-
 		while(1){
 
 		}
@@ -39,6 +38,7 @@ int main(void){
 	PWM_CCU8_Start(&PWM_Boost);
 	TIMER_Start(&TIMER_Controller_Clock);
 
+	/* Launch application code */
 	//while(true) BodeMeasurement();
 	ExtremumSeekingController();
 

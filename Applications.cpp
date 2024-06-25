@@ -17,11 +17,12 @@
 void BodeMeasurement(){
 	// ! Expects the timer to trigger at 1 kHz !
 
+	// define parameters for the sine wave
 	const fix32<16> sample_time(0.001f);
 	const fix32<16> driving_frequ(1.f * 2.f * 3.1415f);
 	const fix32<16> driving_amplitude(0.05f);
 
-
+	// define the frequencies at which to sample the bode diagram
 	const fix32<16> driving_frequencies[] = {
 			1,
 			2,
@@ -43,20 +44,21 @@ void BodeMeasurement(){
 			90,
 			100,
 			200};
-
 	const size_t number_of_frequencies = sizeof(driving_frequencies) / sizeof(driving_frequencies[0]);
 
+	// instanciate the sine generator
 	SineGenerator<fix32<16>> sineGen(sample_time, driving_frequ, driving_amplitude);
 
+	// fixpoint variables that measure store the correlation
 	fix32<16> sine_cross_corr(0);
 	fix32<16> cos_cross_corr(0);
-
 	fix32<16> sine_auto_corr(0);
 	fix32<16> cos_auto_corr(0);
 
 	size_t sample_index = 0;
 	size_t freq_index = 0;
 
+	// output csv header
 	cout << "frequency, sine_cross_corr, cos_cross_corr" << endl;
 
 	uint32_t count = 0;
@@ -65,38 +67,48 @@ void BodeMeasurement(){
 		++count;
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
-
+			
+			// sample over 8000 steps, then output the results
 			if(sample_index >= 8000){
+				
+				// output results
 				cout << driving_frequencies[freq_index] << ", " << sine_cross_corr << ", " << cos_cross_corr << endl;
 
+				// load next frequency
 				sample_index = 0;
 				++freq_index;
-
+				
+				// end condition
 				if(freq_index >= number_of_frequencies){
 					set_duty_cycles(0);
 					cout << "END" << endl;
 					return;
 				}
 
+				// set new frequency
 				sineGen.set_freq(driving_frequencies[freq_index] * 2.f * 3.1415f);
 
+				// initialise next iteration
 				sine_cross_corr = 0;
 				cos_cross_corr = 0;
 				sine_auto_corr = 0;
 				cos_auto_corr = 0;
 			}
-
+			
+			// get measurements
 			const fix32<16> U = output_voltage<fix32<16>>();
 			const fix32<16> I = output_current<fix32<16>>();
 			const fix32<16> P = U * I;
 
+			// calculate correlation
 			sine_cross_corr += P * sineGen.sine();
 			cos_cross_corr += P * sineGen.cosine();
 
+			// output new sine value
 			const fix32<16> gain = sineGen.sine() + fix32<16>(0.5);
-
 			set_duty_cycles(gain);
 
+			// increment for next iteration
 			sineGen.next();
 			++sample_index;
 		}
@@ -129,20 +141,28 @@ void ExtremumSeekingController(){
 	while(true){
 		if(TIMER_GetInterruptStatus (&TIMER_Controller_Clock)){
 			TIMER_ClearEvent (&TIMER_Controller_Clock);
+			
+			// load measurement results
 			const fix32<16> U = output_voltage();
 			const fix32<16> I = output_current();
 			const fix32<16> P = U * I;
 
+			// perform the ESC algorithm
 			const fix32<16> sine = sineGen.next();
 			movingAverageCorrelation.input(P*(sine*correlation_gain));
-			const fix32<16> correlation = movingAverageCorrelation.sum(); // use the sum instead of the average to not loose information
+			// use the sum instead of the average to not loose information
+			const fix32<16> correlation = movingAverageCorrelation.sum(); 
 			const fix32<16> integrator_output = integrator.input(correlation);
 
-			if(integrator_output < fix32<16>(-0.1f)) integrator.reset(); // prevent integrator from integrating into negative numbers for ever.
+			// when no input power / output load is connected the correlation may get negative and the integrator reduces count.
+			// prevent iterator to count to negative infinity. Resetting the integrator makes the algorithm more available.
+			if(integrator_output < fix32<16>(-0.1f)) integrator.reset(); 
 
+			// output new gain. 
 			const fix32<16> gain = sine + start_offset + integrator_output;
 			set_duty_cycles(gain);
 
+			// print results with large intervalls to not busy wait for buffers to flush
 			if (update_counter > 100){
 				update_counter = 0;
 				cout << U << ", ";
