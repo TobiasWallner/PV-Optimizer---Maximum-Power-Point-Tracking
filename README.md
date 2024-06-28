@@ -20,3 +20,14 @@ File Structure
 	* **MovingAverage.hpp** - A fast moving average for types of integral (~integer) precision.
 	* **SineGenerator.hpp** - A sine generator based on the wave function.
 	
+Branch Structure
+----------------
+The following branches are snapshots that compile, work and the algorithm seems to be able to find the maxima.
+* ESC_v1.0
+* ESC_v1.1
+* ESC_v1.2
+* main - newest: lowest driving amplitude with 1uF caps for Vout and Iin
+
+Building
+--------
+Build with at least g++ version 4.5 and C++14. In the DAVE IDE this can be selected in Project>Properties>C/C++Build>Settings>ARM-GCC C Compiler>Miscellaneous>Language Standard
