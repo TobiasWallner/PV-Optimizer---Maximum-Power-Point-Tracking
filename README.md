@@ -3,6 +3,18 @@ PV-Optimizer
 
 A PV-Optimizer Algorithm using modulated sine waves and their correlation to determine the gradient. 
 
+Outputs measurements periodically over the USART at 256000 Baud like in a csv file:
+first line is the header:
+following line are the corresponding measurements seperated by ',' as column separators 
+
+Example output:
+```
+U, I, P, gain, correlation, integrator
+1.976, 0.1676, 0.6826, 0.2488, 0.09332, 0.1619
+4.055, 0.1225, 0.7073, 0.3449, -0.6204, 0.4696
+10.445, 1.030, 7.931, 0.9803, -2.254, 0.6792
+```
+
 File Structure
 --------------
 
