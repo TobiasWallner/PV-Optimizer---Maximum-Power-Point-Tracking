@@ -42,4 +42,4 @@ The following branches are snapshots that compile, work and the algorithm seems 
 
 Building
 --------
-Build with at least g++ version 4.5 and C++14. In the DAVE IDE this can be selected in Project>Properties>C/C++Build>Settings>ARM-GCC C Compiler>Miscellaneous>Language Standard
+Build with at least g++ version 4.5 and C++ 14. In the DAVE IDE this can be selected in Project>Properties>C/C++Build>Settings>ARM-GCC C Compiler>Miscellaneous>Language Standard
