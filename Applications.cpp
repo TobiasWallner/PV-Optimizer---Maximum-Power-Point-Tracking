@@ -119,11 +119,41 @@ void BodeMeasurement(){
 void ExtremumSeekingController(){
 	// ! Expects the timer to trigger at 1 kHz !
 
+	/*
+		This algorithm can get stuck in local maxima that are smaller than the driving amplitude.
+		One way of avoiding this is increasing the driving amplitude. Note that when increasing the
+		driging amplitude, the gain of the controller rises too, so you might want to decrease the
+		correlation gain or the integrator gain.
+		
+		Also note that when the gain of this controller is chosen to be too large and the slope of the
+		integrator output becomes close to the slope of the 20Hz driving signal, the controller may become instable.
+		If the Controller becomes instable the correlation will turn strongly negative which effectively
+		runs the bord down to a zero gain or zero duty-cycle. This will act as its fail-safe point from where
+		it will then try to restart its operation. 
+	*/
+	
+	/*
+		Outputs measurements periodically over the USART at 256000 Baud like in a csv file:
+		first line is the header:
+			"U, I, P, gain, correlation, integrator\n"
+		
+		following line are the corresponding measurements seperated by ',' as column separators 
+		and '\n' as newline separators
+	*/
+
+	/*
+		This version uses the lowest driving amplitude that could only be achieved after replacing the
+		Capacitors of Vout and Iin from 1nF to 1uF.
+
+		The lowest driving amplitude for 1nF capacitors was 0.05 to not be stuck at local maxima in the
+		regoin of 0-20% Duty-Cycle
+	*/
+
 	// initialize the extremum seeking controller parameters
-	const fix32<16> sample_time(0.001f);
+	const fix32<16> sample_time(0.001f); // The period of the TIMER_Controller_Clock
 	const fix32<16> driving_frequ(20.f * 2.f * 3.1415f);
 	const fix32<16> driving_amplitude(0.02f);
-	const fix32<16> integrator_gain(1);
+	const fix32<16> integrator_gain(1); // change the correlation_gain instead to have more numeric accuracy
 	const fix32<16> correlation_gain(4);
 	const fix32<16> start_offset(driving_amplitude);
 
