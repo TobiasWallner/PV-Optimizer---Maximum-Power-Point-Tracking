@@ -133,7 +133,6 @@ void ExtremumSeekingController(){
 	Integrator<fix32<16>> integrator(sample_time, integrator_gain);
 
 	size_t update_counter = 0;
-	size_t update_state = 0;
 
 	cout << "U, I, P, gain, correlation, integrator" << endl;
 
