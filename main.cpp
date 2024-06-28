@@ -9,13 +9,6 @@ extern "C"{
 	#include <DAVE.h>
 }
 
-#include <fix32.hpp>
-#include <SineGenerator.hpp>
-#include <Integrator.hpp>
-#include <MovingAverage.hpp>
-
-#include "print.hpp"
-#include "board.hpp"
 #include "Applications.hpp"
 
 
