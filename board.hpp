@@ -11,6 +11,11 @@
 	This header file accts like a basic BIOS for the PWM and ADC Measurements of the board. 
 */
 
+extern "C"{
+	#include <DAVE.h>
+}
+#include <fix32.hpp>
+
 // functions to get the raw measurements from the ADC. 
 inline uint32_t Vout_filtered_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_Vout_filtered_handle);}
 inline uint32_t IL_filtered2_raw() {return ADC_MEASUREMENT_ADV_GetResult(&ADC_IL_filtered2_handle);}
@@ -74,7 +79,7 @@ inline T Iin_current(){
 }
 
 // variable that stores the boost loss coefficient.
-static fix32<16> boost_loss(1L);
+extern fix32<16> boost_loss;
 
 // returns the estimated output current based on the input current and the current pwm-dutycycle / boost_loss
 template<class T = fix32<16>>
